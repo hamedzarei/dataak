@@ -1,5 +1,9 @@
 # Dataak Sample Project
 
+## Run
+
+docker-compose up 
+docker-compose up -d
 
 ### create user
 
