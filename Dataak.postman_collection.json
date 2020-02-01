@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "d07f1151-9120-449f-a357-dffe542ea9ca",
+		"name": "Dataak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "update user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1ZTMzZjY2MTNlODRjIiwiaWF0IjoiMTU4MDQ2MzcxMy4yNTU5MjEiLCJuYmYiOiIxNTgwNDYzNzE0LjI1NTkyMSIsInVpZCI6Mn0._5nfB0hRIHaMeUCRpunZp0tyMY0E7pSkCIDCi1q_SUk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\": \"javadi01234\",\n\t\"email\": \"javadi@mail.ir\",\n\t\"mobile\": \"09124174788\",\n\t\"name\": \"javadi\"\n}"
+						},
+						"url": {
+							"raw": "localhost:1212/users/2",
+							"host": [
+								"localhost"
+							],
+							"port": "1212",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1ZTMzZjY2MTNlODRjIiwiaWF0IjoiMTU4MDQ2MzcxMy4yNTU5MjEiLCJuYmYiOiIxNTgwNDYzNzE0LjI1NTkyMSIsInVpZCI6Mn0._5nfB0hRIHaMeUCRpunZp0tyMY0E7pSkCIDCi1q_SUk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\": \"javadi01234\",\n\t\"email\": \"javadi@mail.ir\",\n\t\"mobile\": \"09124174788\",\n\t\"name\": \"javadi\"\n}"
+						},
+						"url": {
+							"raw": "localhost:1212/users/2",
+							"host": [
+								"localhost"
+							],
+							"port": "1212",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upoad image file for user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1ZTMzZmQ5Y2RkMmFhIiwiaWF0IjoiMTU4MDQ2NTU2NC45MDU3MjYiLCJuYmYiOiIxNTgwNDY1NTY1LjkwNTcyNiIsInVpZCI6Mn0.L307fpwXhdERIyjbW6XXn2_j1HCbcRGA4CD8KmDlQe0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/zrhm7232/Pictures/Screenshot from 2019-05-03 14-46-29.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:1212/users/2/image",
+							"host": [
+								"localhost"
+							],
+							"port": "1212",
+							"path": [
+								"users",
+								"2",
+								"image"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "issue new token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identity\": \"javadi@mail.ir\",\n\t\"password\": \"javadi01234\"\n}"
+						},
+						"url": {
+							"raw": "localhost:1212/tokens/issue",
+							"host": [
+								"localhost"
+							],
+							"port": "1212",
+							"path": [
+								"tokens",
+								"issue"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
