@@ -32,6 +32,8 @@ $router->group([ 'prefix' => 'users' ], function () use ($router) {
 $router->group([ 'prefix' => 'invitations' ], function () use ($router) {
     $router->post('', [ 'middleware' => 'token',
         'uses' => 'InvitationController@createItem']);
+    $router->get('/mine', [ 'middleware' => 'token',
+        'uses' => 'InvitationController@getMine']);
 //    $router->get('', ['middleware' => 'token', 'uses' => 'InvitationController@getItems']);
 //    $router->get('{id}', [ 'middleware' => 'token', 'uses' => 'InvitationController@getItem']);
 //    $router->put('{id}', [ 'middleware' => 'token', 'uses' => 'InvitationController@updateItem']);

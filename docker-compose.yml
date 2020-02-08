@@ -7,6 +7,8 @@ services:
     networks:
       - mynet
     restart: always
+    volumes:
+      - .:/var/www/application
     ports:
       - '1212:80'
 

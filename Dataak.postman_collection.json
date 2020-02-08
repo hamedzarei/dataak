@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "d07f1151-9120-449f-a357-dffe542ea9ca",
+		"name": "Dataak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "update user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1ZTMzZjY2MTNlODRjIiwiaWF0IjoiMTU4MDQ2MzcxMy4yNTU5MjEiLCJuYmYiOiIxNTgwNDYzNzE0LjI1NTkyMSIsInVpZCI6Mn0._5nfB0hRIHaMeUCRpunZp0tyMY0E7pSkCIDCi1q_SUk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\": \"javadi01234\",\n\t\"email\": \"javadi@mail.ir\",\n\t\"mobile\": \"09124174788\",\n\t\"name\": \"javadi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1212/users/2",
+							"host": [
+								"localhost"
+							],
+							"port": "1212",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1ZTMzZjY2MTNlODRjIiwiaWF0IjoiMTU4MDQ2MzcxMy4yNTU5MjEiLCJuYmYiOiIxNTgwNDYzNzE0LjI1NTkyMSIsInVpZCI6Mn0._5nfB0hRIHaMeUCRpunZp0tyMY0E7pSkCIDCi1q_SUk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\": \"javadi01234\",\n\t\"email\": \"javadi@mail.ir\",\n\t\"mobile\": \"09124174788\",\n\t\"name\": \"javadi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1212/users/2",
+							"host": [
+								"localhost"
+							],
+							"port": "1212",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upoad image file for user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1ZTMzZmQ5Y2RkMmFhIiwiaWF0IjoiMTU4MDQ2NTU2NC45MDU3MjYiLCJuYmYiOiIxNTgwNDY1NTY1LjkwNTcyNiIsInVpZCI6Mn0.L307fpwXhdERIyjbW6XXn2_j1HCbcRGA4CD8KmDlQe0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/zrhm7232/Pictures/Screenshot from 2019-05-03 14-46-29.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:1212/users/2/image",
+							"host": [
+								"localhost"
+							],
+							"port": "1212",
+							"path": [
+								"users",
+								"2",
+								"image"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "issue new token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identity\": \"javadi@mail.ir\",\n\t\"password\": \"javadi01234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1212/tokens/issue",
+							"host": [
+								"localhost"
+							],
+							"port": "1212",
+							"path": [
+								"tokens",
+								"issue"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Invitation",
+			"item": [
+				{
+					"name": "create invitation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1ZTNlMzFkNDIzNDExIiwiaWF0IjoiMTU4MTEzNDI5Mi4xNDI2NjUiLCJuYmYiOiIxNTgxMTM0MjkzLjE0MjY2NSIsInVpZCI6Mn0.NGRkmb3DcscgDb-BGOFxoUJDqJ1LlGhkayJO4FoOnik",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"good party\",\n\t\"description\": \"a\",\n\t\"when\": \"2019-09-01 12:02:01\",\n\t\"type\": \"party\",\n\t\"where\": \"near ali\",\n\t\"invitation_user\": [\n\t\t1,2,3]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1212/invitations",
+							"host": [
+								"localhost"
+							],
+							"port": "1212",
+							"path": [
+								"invitations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get mine",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1ZTNlMzFkNDIzNDExIiwiaWF0IjoiMTU4MTEzNDI5Mi4xNDI2NjUiLCJuYmYiOiIxNTgxMTM0MjkzLjE0MjY2NSIsInVpZCI6Mn0.NGRkmb3DcscgDb-BGOFxoUJDqJ1LlGhkayJO4FoOnik",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:1212/invitations/mine",
+							"host": [
+								"localhost"
+							],
+							"port": "1212",
+							"path": [
+								"invitations",
+								"mine"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
